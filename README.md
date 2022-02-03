@@ -1,4 +1,4 @@
-# Курс "Code as Data"
+# [Курс "Code as Data"](https://gist.github.com/EgorBu/e4e6cf7e2c907e29ee9730567ca00214)
 ```css
 Петропавловский Андрей
 ```
