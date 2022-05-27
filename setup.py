@@ -4,7 +4,7 @@ setuptools.setup(
     name="similar_dev_search_petropavlovskiy",
     version="0.1",
     description="Similar developers search poject",
-    setup_requires=["fire", "dulwich", "tqdm"],
+    setup_requires=["fire", "dulwich", "tqdm", "PyGithub"],
     packages=setuptools.find_packages(),
-    install_requires=["fire", "dulwich", "tqdm"]
+    install_requires=["fire", "dulwich", "tqdm", "PyGithub"]
 )
