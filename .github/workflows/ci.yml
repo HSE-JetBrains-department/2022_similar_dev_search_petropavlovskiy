@@ -48,13 +48,16 @@ jobs:
           pip install build
       - name: Build package
         run: python -m build
+      - name: Set outputs
+        id: vars
+        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: $(git rev-parse --short "$GITHUB_SHA") #'v1.0'
+          tag_name: ${{ steps.vars.outputs.sha_short }} #'v1.0'
           release_name: Release
           draft: false
           prerelease: false
