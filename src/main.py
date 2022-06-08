@@ -11,9 +11,6 @@ def get_repo(url, path):
     :param url: repository url
     :return: list of commits
     """
-    #url = 'https://github.com/navgurukul/newton'
-    #path = 'C:/Users/User1337/Downloads/cad.json'
-    #url = 'https://github.com/MicrosoftDocs/pipelines-python-django'
     url = 'https://github.com/OmdenaAI/Arabic-Chapter'
     path = path.replace('\\','\\\\')
     with open(path) as file:
