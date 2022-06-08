@@ -1,4 +1,5 @@
 import json
+from typing import Dict, List
 
 from dulwich.diff_tree import TreeChange
 from dulwich.repo import Repo
@@ -7,8 +8,8 @@ from dulwich.walk import WalkEntry
 import difflib
 from tqdm import tqdm
 
-# work with git
-def get_repository_info(url: str):
+
+def get_repository_info(url: str) -> Dict:
     """
     Returns repository description.
     Result structure: {
@@ -31,6 +32,8 @@ def get_repository_info(url: str):
     :param url: repository url
     :return: dict with repository description
     """
+    if not url.endswith(".git"):
+        url = url + ".git"
     repo = clone(url)
 
     res = {
@@ -38,7 +41,6 @@ def get_repository_info(url: str):
         'commits': {}
     }
 
-    # walk through changes
     for entry in tqdm(repo.get_walker()):
         commit = entry.commit
         commit_sha = commit.sha().hexdigest()
@@ -57,7 +59,7 @@ def get_repository_info(url: str):
     return res
 
 
-def get_changes(entry: WalkEntry, repo: Repo):
+def get_changes(entry: WalkEntry, repo: Repo) -> List:
     """
     Returns changes list.
     :param entry: entry object
@@ -75,7 +77,7 @@ def get_changes(entry: WalkEntry, repo: Repo):
     return res
 
 
-def get_change_info(change: TreeChange, repo: Repo):
+def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
     """
     Returns change info.
     Result structure: {
@@ -120,8 +122,7 @@ def get_change_info(change: TreeChange, repo: Repo):
     return res
 
 
-# work with files
-def save_data(data, path):
+def save_data(data: Dict, path: str):
     """
     Saves data as JSON file
     :param data: data to save
@@ -129,4 +130,4 @@ def save_data(data, path):
     :return: none
     """
     with open(path, 'w') as f:
-        f.write(json.dumps(data, indent=6,  ensure_ascii=False))
+        f.write(json.dumps(data, indent=6, ensure_ascii=False))
