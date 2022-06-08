@@ -1,9 +1,8 @@
-from config import *
-from helpers import *
 import fire
+from helpers import *
 
 
-# 1. git part
+
 def get_repo(url, path):
     """
     Save data about repository to json file.

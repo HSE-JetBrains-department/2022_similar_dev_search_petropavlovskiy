@@ -1,3 +1,4 @@
+import difflib
 import json
 from typing import Dict, List
 
@@ -5,7 +6,6 @@ from dulwich.diff_tree import TreeChange
 from dulwich.repo import Repo
 from dulwich.porcelain import clone
 from dulwich.walk import WalkEntry
-import difflib
 from tqdm import tqdm
 
 

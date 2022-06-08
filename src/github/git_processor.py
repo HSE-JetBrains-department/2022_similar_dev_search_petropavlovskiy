@@ -1,5 +1,5 @@
 import logging
-from typing import Dict, List
+
 
 from github import Github
 from github.NamedUser import NamedUser
