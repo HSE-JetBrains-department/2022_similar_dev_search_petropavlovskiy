@@ -3,9 +3,10 @@ import json
 from typing import Dict, List
 
 from dulwich.diff_tree import TreeChange
-from dulwich.repo import Repo
 from dulwich.porcelain import clone
+from dulwich.repo import Repo
 from dulwich.walk import WalkEntry
+
 from tqdm import tqdm
 
 
