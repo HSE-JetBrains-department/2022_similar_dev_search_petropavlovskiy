@@ -71,6 +71,7 @@ jobs:
           asset_path: dist/similar_dev_search_petropavlovskiy-0.1.tar.gz
           asset_name: similar_dev_search_petropavlovskiy.tar.gz
           asset_content_type: package/.tar.gz
+          #
   hello_world_job:
     runs-on: ubuntu-latest
     name: A job to say hello
