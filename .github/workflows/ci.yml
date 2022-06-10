@@ -24,10 +24,7 @@ jobs:
           pip install flake8 pytest
           pip install flake8-import-order
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          wget https://github.com/src-d/gitbase/releases/download/v0.23.1/gitbase_v0.23.1_linux_amd64.tar.gz
-          tar -xvzf gitbase_v0.23.1_linux_amd64.tar.gz
-          cd gitbase_linux_amd64
-          echo | ./gitbase --help
+          $ chmod +x docker/entrypoint.sh
       - name: Lint with flake8
         run: |
           # stop the build if there are Python syntax errors or undefined names
@@ -75,3 +72,15 @@ jobs:
           asset_path: dist/similar_dev_search_petropavlovskiy-0.1.tar.gz
           asset_name: similar_dev_search_petropavlovskiy.tar.gz
           asset_content_type: package/.tar.gz
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: actions/hello-world-docker-action@v1
+        with:
+          who-to-greet: 'Mona the Octocat'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"

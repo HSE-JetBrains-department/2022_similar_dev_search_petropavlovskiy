@@ -1,6 +1,6 @@
 import difflib
 import json
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 from dulwich.diff_tree import TreeChange
 from dulwich.porcelain import clone
@@ -35,7 +35,9 @@ def get_repository_info(url: str) -> Dict:
     """
     if not url.endswith(".git"):
         url = url + ".git"
-    repo = clone(url)
+
+    repo_name = url.split('.git')[0].split('/')[-1]
+    repo = clone(url,f"src\\repos\\{repo_name}")
 
     res = {
         'url': url,
@@ -91,7 +93,6 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
     :param repo: repository object
     :return: change as dict
     """
-
     res = {
         'file': (change.new.path or change.old.path).decode(),
         'blob_id': (change.new.sha or change.old.sha).decode(),
