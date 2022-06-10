@@ -11,11 +11,7 @@ def get_repo(url, path):
     :param url: repository url
     :return: list of commits
     """
-    url = 'https://github.com/OmdenaAI/Arabic-Chapter'
     path = path.replace('\\','\\\\')
-    with open(path) as file:
-        lines = file.readlines()
-        print(lines)
     save_data(get_repository_info(url), path)
 
 
