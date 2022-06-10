@@ -1,6 +1,7 @@
-import difflib
 import json
-from typing import Dict, List, Tuple
+
+from difflib import unified_diff
+from typing import Dict, List
 
 from dulwich.diff_tree import TreeChange
 from dulwich.porcelain import clone
@@ -112,8 +113,8 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
             res["deleted"] = len(repo.get_object(old_sha).data.decode().splitlines())
 
         else:
-            differences = difflib.unified_diff(repo.get_object(old_sha).data.decode().splitlines(),
-                                               repo.get_object(new_sha).data.decode().splitlines())
+            differences = unified_diff(repo.get_object(old_sha).data.decode().splitlines(),
+                                       repo.get_object(new_sha).data.decode().splitlines())
             for diff in differences:
                 if diff.startswith("+") and not diff.startswith("++"):
                     res["added"] += 1

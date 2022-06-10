@@ -37,7 +37,7 @@ def get_stargazers(repo_name: str, github_token: str, number_of_repo: int) -> di
 
 def wait_for_request(github_account: Github):
     """
-    Wait until GitHub api is usable again
+    Wait until GitHub API is usable again
     :param github_account: account
     """
     search_rate_limit = github_account.get_rate_limit().search
