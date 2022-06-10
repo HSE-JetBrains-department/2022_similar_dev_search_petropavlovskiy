@@ -3,7 +3,6 @@ import fire
 from helpers import *
 
 
-
 def get_repo(url, path):
     """
     Save data about repository to json file.
@@ -11,10 +10,9 @@ def get_repo(url, path):
     :param url: repository url
     :return: list of commits
     """
-    url = 'https://github.com/OmdenaAI/Arabic-Chapter'
-    path = path.replace('\\','\\\\')
+    path = path.replace('\\', '\\\\')
     repo_info = get_repository_info(url)
-    save_data(repo_info,path)
+    save_data(repo_info, path)
 
 
 if __name__ == "__main__":

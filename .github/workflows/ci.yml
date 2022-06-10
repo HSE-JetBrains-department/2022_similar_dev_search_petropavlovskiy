@@ -25,9 +25,6 @@ jobs:
           pip install flake8-import-order
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           wget https://github.com/src-d/gitbase/releases/download/v0.23.1/gitbase_v0.23.1_linux_amd64.tar.gz
-          tar -xvzf gitbase_v0.23.1_linux_amd64.tar.gz
-          cd gitbase_linux_amd64
-          echo | ./gitbase --help
       - name: Lint with flake8
         run: |
           # stop the build if there are Python syntax errors or undefined names
