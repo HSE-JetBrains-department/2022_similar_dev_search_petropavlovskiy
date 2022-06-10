@@ -37,7 +37,7 @@ def get_repository_info(url: str) -> Dict:
         url = url + ".git"
 
     repo_name = url.split('.git')[0].split('/')[-1]
-    repo = clone(url,f"src\\repos\\{repo_name}")
+    repo = clone(url,f"src/repos/{repo_name}")
 
     res = {
         'url': url,
