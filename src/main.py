@@ -1,7 +1,7 @@
 import fire
 
-from helpers import *
-
+from helpers import get_repository_info, save_data
+from pathlib2 import Path
 
 
 def get_repo(url, path):
@@ -11,8 +11,11 @@ def get_repo(url, path):
     :param url: repository url
     :return: list of commits
     """
-    path = path.replace('\\','\\\\')
-    save_data(get_repository_info(url), path)
+    path = Path(path)
+    repo_owner = url.split("/")[3]
+    repo_name = url.split("/")[4]
+    repo_name = f"{repo_owner}_{repo_name}"
+    save_data(get_repository_info(url, repo_name), path)
 
 
 if __name__ == "__main__":
