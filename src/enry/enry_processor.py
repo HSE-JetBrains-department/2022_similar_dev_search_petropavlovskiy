@@ -2,6 +2,7 @@ from enry import *
 
 from typing import Dict, Any
 
+
 def process_languages(repo_info: Dict) -> dict[Any, dict[str, Any]]:
     """
     Aggregates information about files and their languages.
