@@ -13,10 +13,8 @@ def get_repo(url, path):
     """
     url = 'https://github.com/OmdenaAI/Arabic-Chapter'
     path = path.replace('\\','\\\\')
-    with open(path) as file:
-        lines = file.readlines()
-        print(lines)
-    save_data(get_repository_info(url), path)
+    repo_info = get_repository_info(url)
+    save_data(repo_info,path)
 
 
 if __name__ == "__main__":
