@@ -2,3 +2,4 @@ fire
 dulwich~=0.20.32
 tqdm~=4.64.0
 PyGithub
+tree_sitter

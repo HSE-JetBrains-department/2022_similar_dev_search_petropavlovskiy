@@ -18,3 +18,12 @@ def process_languages(repo_info: Dict) -> dict[Any, dict[str, Any]]:
             }
 
     return res
+
+
+def get_language(blob_path: str) -> str:
+    """
+    Return programming language which is used in file
+    :param blob_path: path to file
+    :return: programming language
+    """
+    return get_language_by_extension(blob_path).language

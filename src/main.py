@@ -13,7 +13,7 @@ def get_repo(url, path):
     path = path.replace('\\', '\\\\')
     repo_info = get_repository_info(url)
     save_data(repo_info, path)
-
+    #save_data()
 
 if __name__ == "__main__":
     fire.Fire({
