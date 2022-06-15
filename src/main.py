@@ -15,7 +15,8 @@ def get_repo(url, path):
     repo_owner = url.split("/")[3]
     repo_name = url.split("/")[4]
     repo_name = f"{repo_owner}_{repo_name}"
-    save_data(get_repository_info(url, repo_name), path)
+    repo_info = get_repository_info(url, repo_name)
+    save_data(repo_info, path)
 
 
 if __name__ == "__main__":

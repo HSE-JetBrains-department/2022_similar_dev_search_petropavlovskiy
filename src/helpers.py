@@ -98,6 +98,7 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
     res = {
         "file": (change.new.path or change.old.path).decode(),
         "blob_id": (change.new.sha or change.old.sha).decode(),
+        "blob_path": str(Path(f"{repo.path}/{(change.new.path or change.old.path).decode()}").absolute()),
         "added": 0,
         "deleted": 0
     }
