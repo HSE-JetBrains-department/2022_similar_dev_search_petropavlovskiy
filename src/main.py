@@ -1,6 +1,6 @@
 import fire
 
-from helpers import *
+from git.helpers import get_repository_info, save_data
 
 
 def get_repo(url, path):

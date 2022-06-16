@@ -1,13 +1,20 @@
 import difflib
 import json
+import os
 from typing import Dict, List
 
 from dulwich.diff_tree import TreeChange
 from dulwich.porcelain import clone
 from dulwich.repo import Repo
 from dulwich.walk import WalkEntry
+from pathlib2 import Path
 
 from tqdm import tqdm
+
+from code_processing.enry_processor import get_language
+from code_processing.treesitter import process_variables
+
+from code_processing.treesitter import setup_tree_sitter_parser
 
 
 def get_repository_info(url: str) -> Dict:
@@ -36,7 +43,7 @@ def get_repository_info(url: str) -> Dict:
     if not url.endswith(".git"):
         url = url + ".git"
     repo = clone(url)
-
+    setup_tree_sitter_parser(repo)
     res = {
         'url': url,
         'commits': {}
@@ -91,13 +98,20 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
     :param repo: repository object
     :return: change as dict
     """
-
+    blob_path = str(Path(f"{repo.path}/{(change.new.path or change.old.path).decode()}").absolute())
     res = {
         'file': (change.new.path or change.old.path).decode(),
         'blob_id': (change.new.sha or change.old.sha).decode(),
+        "blob_path": blob_path,
         'added': 0,
-        'deleted': 0
+        'deleted': 0,
+        "code_info": {
+            "language": get_language(blob_path)
+        }
+
     }
+
+    res["code_info"]["code_elements"] = process_variables(blob_path, res["code_info"]["language"])
 
     try:
         old_sha = change.old.sha

@@ -3,7 +3,7 @@ from enry import *
 from typing import Dict, Any
 
 
-def process_languages(repo_info: Dict) -> dict[Any, dict[str, Any]]:
+def process_languages(repo_info: Dict) -> dict:
     """
     Aggregates information about files and their languages.
     :param repo_info: dictionary with information about commits and their authors
