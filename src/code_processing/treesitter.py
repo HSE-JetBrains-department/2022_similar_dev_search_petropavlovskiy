@@ -5,8 +5,10 @@ from typing import Dict
 
 from dulwich.porcelain import clone
 from dulwich.repo import Repo
+
 from pathlib2 import Path
-from tree_sitter import Parser, Language
+
+from tree_sitter import Language, Parser
 
 PARSER = Parser()
 logger = logging.getLogger(__name__)
