@@ -4,6 +4,8 @@ from git.helpers import get_repository_info, save_data
 
 from pathlib2 import Path
 
+from src.stargaze.git_processor import get_stargazers
+
 
 def get_repo(url, path):
     """
@@ -18,6 +20,8 @@ def get_repo(url, path):
     repo_name = f"{repo_owner}_{repo_name}"
     repo_info = get_repository_info(url, repo_name)
     save_data(repo_info, path)
+    # save_data(get_stargazers("scikit-learn/scikit-learn", "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", 5),
+    #           "C:\\Users\\User1337\\Downloads\\star.json")
 
 
 if __name__ == "__main__":

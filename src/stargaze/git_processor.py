@@ -1,6 +1,7 @@
 import calendar
 import logging
 import time
+from typing import Dict, List
 
 from github import Github, RateLimitExceededException
 from github.NamedUser import NamedUser
@@ -8,7 +9,7 @@ from github.NamedUser import NamedUser
 logger = logging.getLogger(__name__)
 
 
-def get_stargazers(repo_name: str, github_token: str, number_of_repo: int) -> dict[NamedUser, list[str]]:
+def get_stargazers(repo_name: str, github_token: str, number_of_repo: int) -> Dict[NamedUser, List[str]]:
     """
     Returns map of username to user's repositories.
     :param repo_name: repository where we search stargazers
