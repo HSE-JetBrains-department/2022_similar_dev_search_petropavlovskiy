@@ -59,8 +59,8 @@ def process_identifiers(blob_path: str, language: str) -> Dict:
                 "classes" if capture_type == "class_name" else (
                     "imports" if capture_type == "dotted_name" else "functions"))][ident] += 1
         return ident_vector
-    except:
-        pass
+    except Exception as e:
+        print(e)
 
 
 def clone_repo(path: str) -> Repo:
