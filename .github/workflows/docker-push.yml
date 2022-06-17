@@ -1,16 +1,9 @@
 name: docker-push
 
 on:
-  push:
-    branches:
-      - '**'
-  workflow_dispatch:
-  pull_request:
-    types: [ opened, reopened ]
-  release:
-    types: [ published ]
+  [ workflow_dispatch ]
 
-  # Build and push the Docker image
+# Build and push the Docker image
 jobs:
   push_to_registry:
     name: Build and push Docker image to Docker Hub
