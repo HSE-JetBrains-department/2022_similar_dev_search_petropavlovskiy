@@ -1,8 +1,10 @@
 name: docker-push
 
 on:
+  push:
+    branches:
+      - '**'
   workflow_dispatch:
-    workflows: [ "Build" ]
   pull_request:
     types: [ opened, reopened ]
   release:
