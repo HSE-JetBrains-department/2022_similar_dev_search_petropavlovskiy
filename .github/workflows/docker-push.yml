@@ -16,6 +16,9 @@ jobs:
     name: Build and push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
+      - name: Git config
+        run: |
+          git config --global init.defaultBranch main
       - name: Check out the repo
         uses: actions/checkout@v2
       - name: Build and push image to the Docker Hub
