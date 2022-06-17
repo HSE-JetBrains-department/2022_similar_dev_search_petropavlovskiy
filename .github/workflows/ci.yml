@@ -71,15 +71,22 @@ jobs:
           asset_path: dist/similar_dev_search_petropavlovskiy-0.1.tar.gz
           asset_name: similar_dev_search_petropavlovskiy.tar.gz
           asset_content_type: package/.tar.gz
-  hello_world_job:
+
+  # Build and push the Docker image
+  push_to_registry:
+    name: Build and push Docker image to Docker Hub
+    if: github.event_name == 'release'
     runs-on: ubuntu-latest
-    name: A job to say hello
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: actions/hello-world-docker-action@v1
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
+      - name: Build and push image to the Docker Hub
+        uses: docker/build-push-action@v1
         with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: ${{ secrets.DOCKERHUB_REPOSITORY }}
+          tag_with_ref: true
+          tag_with_sha: true
+          tags: latest
