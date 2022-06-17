@@ -1,6 +1,6 @@
 import unittest
 
-from code_processing.enry_processor import get_language
+from src.code_processing.enry_processor import get_language
 
 from pathlib2 import Path
 
