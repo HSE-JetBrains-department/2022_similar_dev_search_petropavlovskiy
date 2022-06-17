@@ -4,7 +4,7 @@ import setuptools
 
 install_reqs = ["fire",
                 "dulwich",
-                "tqdm"
+                "tqdm",
                 "PyGithub",
                 "pathlib2",
                 "setuptools",
