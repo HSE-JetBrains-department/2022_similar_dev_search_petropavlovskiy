@@ -2,9 +2,9 @@ import logging
 import os
 import unittest
 
-from git.helpers import get_repository_info
-
 from pathlib2 import Path
+
+from src.git.helpers import get_repository_info
 
 logger = logging.getLogger(__name__)
 
