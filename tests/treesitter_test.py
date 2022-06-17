@@ -1,8 +1,9 @@
 import unittest
 
+from code_processing.treesitter import process_identifiers, setup_tree_sitter_parser
+
 from pathlib2 import Path
 
-from code_processing.treesitter import process_identifiers, setup_tree_sitter_parser
 
 
 class TreeSitterTest(unittest.TestCase):
