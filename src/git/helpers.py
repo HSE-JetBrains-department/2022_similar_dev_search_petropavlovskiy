@@ -12,10 +12,10 @@ from dulwich.walk import WalkEntry
 
 from pathlib2 import Path
 
-from src.code_processing.enry_processor import get_language
-from src.code_processing.treesitter import process_identifiers
+from code_processing.enry_processor import get_language
+from code_processing.treesitter import process_identifiers
 
-from src.code_processing.treesitter import setup_tree_sitter_parser
+from code_processing.treesitter import setup_tree_sitter_parser
 
 from tqdm import tqdm
 
