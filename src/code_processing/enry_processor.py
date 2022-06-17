@@ -1,6 +1,8 @@
-from enry import *
+#from enry import *
 
 from typing import Dict, Any
+
+using_languages = ['python', 'java', 'javascript']
 
 
 def process_languages(repo_info: Dict) -> dict:
@@ -14,7 +16,7 @@ def process_languages(repo_info: Dict) -> dict:
         for info in value['changes']:
             res[info['blob_path']] = {
                 'blob_id': info['blob_id'],
-                'language': get_language_by_extension(info['blob_path']).language
+                'language': ""#get_language_by_extension(info['blob_path']).language
             }
 
     return res
@@ -26,4 +28,5 @@ def get_language(blob_path: str) -> str:
     :param blob_path: path to file
     :return: programming language
     """
-    return get_language_by_extension(blob_path).language
+    language = ""#get_language_by_extension(blob_path).language.lower()
+    return language if using_languages.__contains__(language) else ""

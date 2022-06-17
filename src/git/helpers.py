@@ -1,7 +1,8 @@
 import json
+import os.path
 
 from difflib import unified_diff
-import os
+
 from typing import Dict, List
 
 from dulwich.diff_tree import TreeChange
@@ -12,10 +13,10 @@ from pathlib2 import Path
 
 from tqdm import tqdm
 
-from code_processing.enry_processor import get_language
-from code_processing.treesitter import process_variables
+from src.code_processing.enry_processor import get_language
+from src.code_processing.treesitter import process_identifiers
 
-from code_processing.treesitter import setup_tree_sitter_parser
+from src.code_processing.treesitter import setup_tree_sitter_parser
 
 
 def get_repository_info(url: str, repo_name: str) -> Dict:
@@ -44,8 +45,13 @@ def get_repository_info(url: str, repo_name: str) -> Dict:
     if not url.endswith(".git"):
         url = url + ".git"
 
-    clone_path = Path(f"{Path().cwd()}/repos/{repo_name}")
-    repo = clone(url, clone_path)
+    clone_path = Path(f"{Path().cwd().parent}/repos/{repo_name}")
+    if os.path.exists(clone_path):
+        repo = Repo(clone_path.resolve())
+    else:
+        repo = clone(url, clone_path)
+
+    setup_tree_sitter_parser()
 
     res = {
         "url": url,
@@ -102,6 +108,7 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
     :return: change as dict
     """
     blob_path = str(Path(f"{repo.path}/{(change.new.path or change.old.path).decode()}").absolute())
+    print(f"language: {get_language(blob_path)}")
     res = {
         'file': (change.new.path or change.old.path).decode(),
         'blob_id': (change.new.sha or change.old.sha).decode(),
@@ -114,7 +121,8 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
 
     }
 
-    res["code_info"]["code_elements"] = process_variables(blob_path, res["code_info"]["language"])
+    res["code_info"]["code_elements"] = process_identifiers(blob_path, res["code_info"]["language"])
+    print(res)
 
     try:
         old_sha = change.old.sha
