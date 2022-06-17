@@ -38,6 +38,8 @@ on:
     branches:
       - main
       - cad-all
+  release:
+    types: [ published ]
 
 env:
   REGISTRY: ghcr.io
