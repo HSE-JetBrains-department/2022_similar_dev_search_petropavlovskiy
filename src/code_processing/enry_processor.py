@@ -1,6 +1,6 @@
-from enry import *
-
 from typing import Dict
+
+from enry import *
 
 using_languages = ['python', 'java', 'javascript']
 

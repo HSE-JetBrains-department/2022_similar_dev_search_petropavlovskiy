@@ -9,14 +9,15 @@ from dulwich.diff_tree import TreeChange
 from dulwich.porcelain import clone
 from dulwich.repo import Repo
 from dulwich.walk import WalkEntry
-from pathlib2 import Path
 
-from tqdm import tqdm
+from pathlib2 import Path
 
 from src.code_processing.enry_processor import get_language
 from src.code_processing.treesitter import process_identifiers
 
 from src.code_processing.treesitter import setup_tree_sitter_parser
+
+from tqdm import tqdm
 
 
 def get_repository_info(url: str, repo_name: str) -> Dict:
