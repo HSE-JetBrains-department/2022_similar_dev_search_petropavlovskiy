@@ -10,12 +10,13 @@ from dulwich.porcelain import clone
 from dulwich.repo import Repo
 from dulwich.walk import WalkEntry
 
-from pathlib2 import Path
-
 from code_processing.enry_processor import get_language
 from code_processing.treesitter import process_identifiers
 
 from code_processing.treesitter import setup_tree_sitter_parser
+
+from pathlib2 import Path
+
 
 from tqdm import tqdm
 
