@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - 'cad**'
+      - cad-docker-actions
   pull_request:
     types: [ opened, reopened ]
   release:
