@@ -1,6 +1,6 @@
 from typing import Dict
 
-from enry import *
+from enry import get_language_by_extension
 
 using_languages = ['python', 'java', 'javascript']
 
