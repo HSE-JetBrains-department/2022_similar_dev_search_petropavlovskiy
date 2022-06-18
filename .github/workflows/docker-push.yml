@@ -1,12 +1,6 @@
 name: docker-push
 
-on:
-  push:
-    branches:
-      - main
-      - cad-all
-  release:
-    types: [ published ]
+on: [ push, pull_request, release ]
 
 env:
   REGISTRY: ghcr.io
