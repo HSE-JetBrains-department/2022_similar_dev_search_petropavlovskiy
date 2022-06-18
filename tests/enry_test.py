@@ -2,7 +2,7 @@ import unittest
 
 from pathlib2 import Path
 
-from src.code_processing.enry_processor import get_language
+from info_processing.code_processing.enry_processor import get_language
 
 
 class EnryTest(unittest.TestCase):

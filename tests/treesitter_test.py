@@ -2,7 +2,7 @@ import unittest
 
 from pathlib2 import Path
 
-from src.code_processing.treesitter import process_identifiers, setup_tree_sitter_parser
+from info_processing.code_processing.treesitter import process_identifiers, setup_tree_sitter_parser
 
 
 class TreeSitterTest(unittest.TestCase):
