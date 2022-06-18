@@ -30,6 +30,7 @@ jobs:
           python -m pytest 
 
   deploy:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
