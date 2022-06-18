@@ -17,7 +17,6 @@ from info_processing.code_processing.treesitter import setup_tree_sitter_parser
 
 from pathlib2 import Path
 
-
 from tqdm import tqdm
 
 
@@ -110,7 +109,6 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
     :return: change as dict
     """
     blob_path = str(Path(f"{repo.path}/{(change.new.path or change.old.path).decode()}").absolute())
-    print(f"language: {get_language(blob_path)}")
     res = {
         'file': (change.new.path or change.old.path).decode(),
         'blob_id': (change.new.sha or change.old.sha).decode(),
@@ -124,7 +122,6 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
     }
 
     res["code_info"]["code_elements"] = process_identifiers(blob_path, res["code_info"]["language"])
-    print(res)
 
     try:
         old_sha = change.old.sha
