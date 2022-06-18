@@ -18,10 +18,10 @@ def get_repo(url, path):
     repo_owner = url.split("/")[3]
     repo_name = url.split("/")[4]
     repo_name = f"{repo_owner}_{repo_name}"
-    repo_info = get_repository_info(url, repo_name)
-    save_data(repo_info, path)
-    # save_data(get_stargazers("scikit-learn/scikit-learn", "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", 5),
-    #           "C:\\Users\\User1337\\Downloads\\star.json")
+    # repo_info = get_repository_info(url, repo_name)
+    # save_data(repo_info, path)
+    save_data(get_stargazers("scikit-learn/scikit-learn", "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", 5),
+              Path("/mnt/c/Users/User1337/Downloads/star.json"))
 
 
 if __name__ == "__main__":

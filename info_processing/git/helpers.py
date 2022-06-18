@@ -10,10 +10,10 @@ from dulwich.porcelain import clone
 from dulwich.repo import Repo
 from dulwich.walk import WalkEntry
 
-from code_processing.enry_processor import get_language
-from code_processing.treesitter import process_identifiers
+from info_processing.code_processing.enry_processor import get_language
+from info_processing.code_processing.treesitter import process_identifiers
 
-from code_processing.treesitter import setup_tree_sitter_parser
+from info_processing.code_processing.treesitter import setup_tree_sitter_parser
 
 from pathlib2 import Path
 
