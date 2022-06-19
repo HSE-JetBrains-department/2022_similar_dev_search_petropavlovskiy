@@ -31,7 +31,7 @@ def get_stargazers(repo_name: str, github_token: str, number_of_repo: int) -> Di
                 repositories.append(starred_repo.full_name)
             user_to_repo[str(user.name)] = repositories
             repositories = []
-            count+=1
+            count += 1
         except RateLimitExceededException as e:
             print(f"Rate limit exception: {e}")
             logger.info("Rate limit exception: {e}")
