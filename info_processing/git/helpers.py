@@ -1,12 +1,20 @@
 import json
+import os.path
 
 from difflib import unified_diff
+
 from typing import Dict, List
 
 from dulwich.diff_tree import TreeChange
 from dulwich.porcelain import clone
 from dulwich.repo import Repo
 from dulwich.walk import WalkEntry
+
+from info_processing.code_processing.enry_processor import get_language
+from info_processing.code_processing.treesitter import process_identifiers
+
+from info_processing.code_processing.treesitter import setup_tree_sitter_parser
+
 from pathlib2 import Path
 
 from tqdm import tqdm
@@ -35,11 +43,13 @@ def get_repository_info(url: str, repo_name: str) -> Dict:
     :param url: repository url
     :return: dict with repository description
     """
-    if not url.endswith(".git"):
-        url = url + ".git"
+    clone_path = Path(f"{Path().cwd().parent}/repos/{repo_name}")
+    if os.path.exists(clone_path):
+        repo = Repo(clone_path.resolve())
+    else:
+        repo = clone(url, clone_path)
 
-    clone_path = Path(f"{Path().cwd()}/repos/{repo_name}")
-    repo = clone(url, clone_path)
+    setup_tree_sitter_parser()
 
     res = {
         "url": url,
@@ -95,13 +105,20 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
     :param repo: repository object
     :return: change as dict
     """
+    blob_path = str(Path(f"{repo.path}/{(change.new.path or change.old.path).decode()}").absolute())
     res = {
-        "file": (change.new.path or change.old.path).decode(),
-        "blob_id": (change.new.sha or change.old.sha).decode(),
-        "blob_path": str(Path(f"{repo.path}/{(change.new.path or change.old.path).decode()}").absolute()),
-        "added": 0,
-        "deleted": 0
+        'file': (change.new.path or change.old.path).decode(),
+        'blob_id': (change.new.sha or change.old.sha).decode(),
+        "blob_path": blob_path,
+        'added': 0,
+        'deleted': 0,
+        "code_info": {
+            "language": get_language(blob_path)
+        }
+
     }
+
+    res["code_info"]["code_elements"] = process_identifiers(blob_path, res["code_info"]["language"])
 
     try:
         old_sha = change.old.sha

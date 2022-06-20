@@ -1,0 +1,1635 @@
+{
+      "url": "https://github.com/alf3ratz/2022_similar_dev_search_petropavlovskiy.git",
+      "commits": {
+            "2ae3f32426a74bae2d7a5207aa6c95a8185850a9": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "src/helpers.py",
+                              "blob_id": "f9c3e6ef11d3f8e3a565ad191ecbf65b013837a2",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/helpers.py",
+                              "added": 1,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "url": 1,
+                                                "clone_path": 1,
+                                                "repo": 1,
+                                                "res": 4,
+                                                "commit": 1,
+                                                "commit_sha": 1,
+                                                "changes": 2,
+                                                "change_dict": 1,
+                                                "old_sha": 1,
+                                                "new_sha": 1,
+                                                "differences": 1
+                                          },
+                                          "functions": {
+                                                "get_repository_info": 1,
+                                                "get_changes": 1,
+                                                "get_change_info": 1,
+                                                "save_data": 1
+                                          },
+                                          "imports": {
+                                                "json": 1,
+                                                "difflib": 1,
+                                                "unified_diff": 1,
+                                                "typing": 1,
+                                                "Dict": 1,
+                                                "List": 1,
+                                                "dulwich.diff_tree": 1,
+                                                "TreeChange": 1,
+                                                "dulwich.porcelain": 1,
+                                                "clone": 1,
+                                                "dulwich.repo": 1,
+                                                "Repo": 1,
+                                                "dulwich.walk": 1,
+                                                "WalkEntry": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1,
+                                                "tqdm": 2
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/main.py",
+                              "blob_id": "37c13744423da2bfdbb03f8eb6e424fc026c4e3c",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/main.py",
+                              "added": 2,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "path": 1,
+                                                "repo_owner": 1,
+                                                "repo_name": 2,
+                                                "repo_info": 1
+                                          },
+                                          "functions": {
+                                                "get_repo": 1
+                                          },
+                                          "imports": {
+                                                "fire": 1,
+                                                "helpers": 1,
+                                                "get_repository_info": 1,
+                                                "save_data": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "2032873e6a42359a6d5362a7a58f86c927c20d49": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "requirements.txt",
+                              "blob_id": "c0f5bf35d814e6ea47bf153abfb9d4e0724df739",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/requirements.txt",
+                              "added": 0,
+                              "deleted": 11,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/github/git_processor.py",
+                              "blob_id": "bb660b46fc1e707fa399b210ba5fc3ad543428a9",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/github/git_processor.py",
+                              "added": 1,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "logger": 1,
+                                                "github": 1,
+                                                "repository": 1,
+                                                "user_to_repo": 1,
+                                                "repositories": 2,
+                                                "search_rate_limit": 1,
+                                                "reset_timestamp": 1
+                                          },
+                                          "functions": {
+                                                "get_stargazers": 1,
+                                                "wait_for_request": 1
+                                          },
+                                          "imports": {
+                                                "calendar": 1,
+                                                "logging": 1,
+                                                "time": 1,
+                                                "github": 1,
+                                                "Github": 1,
+                                                "RateLimitExceededException": 1,
+                                                "github.NamedUser": 1,
+                                                "NamedUser": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/helpers.py",
+                              "blob_id": "c95793d072ab3bd371c5dde43b9507b6b394d78f",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/helpers.py",
+                              "added": 5,
+                              "deleted": 4,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "url": 1,
+                                                "clone_path": 1,
+                                                "repo": 1,
+                                                "res": 4,
+                                                "commit": 1,
+                                                "commit_sha": 1,
+                                                "changes": 2,
+                                                "change_dict": 1,
+                                                "old_sha": 1,
+                                                "new_sha": 1,
+                                                "differences": 1
+                                          },
+                                          "functions": {
+                                                "get_repository_info": 1,
+                                                "get_changes": 1,
+                                                "get_change_info": 1,
+                                                "save_data": 1
+                                          },
+                                          "imports": {
+                                                "json": 1,
+                                                "difflib": 1,
+                                                "unified_diff": 1,
+                                                "typing": 1,
+                                                "Dict": 1,
+                                                "List": 1,
+                                                "dulwich.diff_tree": 1,
+                                                "TreeChange": 1,
+                                                "dulwich.porcelain": 1,
+                                                "clone": 1,
+                                                "dulwich.repo": 1,
+                                                "Repo": 1,
+                                                "dulwich.walk": 1,
+                                                "WalkEntry": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1,
+                                                "tqdm": 2
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "e8f5bf37a917bfc88c93a07c7bf9188a59dc610a": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "requirements.txt",
+                              "blob_id": "d81b5724032752f5cd4158f95b586e8de46cffc6",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/requirements.txt",
+                              "added": 16,
+                              "deleted": 2,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "setup.py",
+                              "blob_id": "d831c0e026d5563357659eb9faba1433c466b2c1",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/setup.py",
+                              "added": 5,
+                              "deleted": 2,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "install_reqs": 1
+                                          },
+                                          "functions": {},
+                                          "imports": {
+                                                "setuptools": 1,
+                                                "pip._internal.req": 1,
+                                                "parse_requirements": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/github/git_processor.py",
+                              "blob_id": "7d29817e0270799743fdd3f869d77e54d6d19bf7",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/github/git_processor.py",
+                              "added": 22,
+                              "deleted": 9,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "logger": 1,
+                                                "github": 1,
+                                                "repository": 1,
+                                                "user_to_repo": 1,
+                                                "repositories": 2,
+                                                "search_rate_limit": 1,
+                                                "reset_timestamp": 1
+                                          },
+                                          "functions": {
+                                                "get_stargazers": 1,
+                                                "wait_for_request": 1
+                                          },
+                                          "imports": {
+                                                "calendar": 1,
+                                                "logging": 1,
+                                                "time": 1,
+                                                "github": 1,
+                                                "Github": 1,
+                                                "RateLimitExceededException": 1,
+                                                "github.NamedUser": 1,
+                                                "NamedUser": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/helpers.py",
+                              "blob_id": "37c575a03c024ff66d2e16d9978d05eb0a3cfb3b",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/helpers.py",
+                              "added": 21,
+                              "deleted": 20,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "url": 1,
+                                                "clone_path": 1,
+                                                "repo": 1,
+                                                "res": 4,
+                                                "commit": 1,
+                                                "commit_sha": 1,
+                                                "changes": 2,
+                                                "change_dict": 1,
+                                                "old_sha": 1,
+                                                "new_sha": 1,
+                                                "differences": 1
+                                          },
+                                          "functions": {
+                                                "get_repository_info": 1,
+                                                "get_changes": 1,
+                                                "get_change_info": 1,
+                                                "save_data": 1
+                                          },
+                                          "imports": {
+                                                "json": 1,
+                                                "difflib": 1,
+                                                "unified_diff": 1,
+                                                "typing": 1,
+                                                "Dict": 1,
+                                                "List": 1,
+                                                "dulwich.diff_tree": 1,
+                                                "TreeChange": 1,
+                                                "dulwich.porcelain": 1,
+                                                "clone": 1,
+                                                "dulwich.repo": 1,
+                                                "Repo": 1,
+                                                "dulwich.walk": 1,
+                                                "WalkEntry": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1,
+                                                "tqdm": 2
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/main.py",
+                              "blob_id": "e7c00c3f9a1424e507fafe455caccc4d8ecc35e4",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/main.py",
+                              "added": 7,
+                              "deleted": 4,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "path": 1,
+                                                "repo_owner": 1,
+                                                "repo_name": 2,
+                                                "repo_info": 1
+                                          },
+                                          "functions": {
+                                                "get_repo": 1
+                                          },
+                                          "imports": {
+                                                "fire": 1,
+                                                "helpers": 1,
+                                                "get_repository_info": 1,
+                                                "save_data": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "test/git_test.py",
+                              "blob_id": "d5af60aaf9b6a425c81a14a7777526afbd86d79c",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/test/git_test.py",
+                              "added": 0,
+                              "deleted": 10,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": null
+                              }
+                        }
+                  ]
+            },
+            "2d9bdcb555b863101c99523f7226bda4a7100e93": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "41f5ca271ef9bff9557705d5b4c101cad96c938d",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 0,
+                              "deleted": 85,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "7ed26f0632ae1971c78e00e649e962e6bd822f09": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/docker/Dockerfile",
+                              "blob_id": "9761d19adfd87beff63856e6e8ea2add70f2fa26",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/docker/Dockerfile",
+                              "added": 0,
+                              "deleted": 8,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": ".github/docker/action.yml",
+                              "blob_id": "0011139e4a702a4d9a0f35f0d0bd824d0c5a405d",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/docker/action.yml",
+                              "added": 0,
+                              "deleted": 16,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": ".github/docker/entrypoint.sh",
+                              "blob_id": "e33ed461ecb9eb47c0f32bcb1a76160ff5e48339",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/docker/entrypoint.sh",
+                              "added": 0,
+                              "deleted": 5,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "5df0ca58ba9e8b572e65fd26646091796cc0b699": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "src/main.py",
+                              "blob_id": "e2468a3d40b46828af14dbee96a932367e014659",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/main.py",
+                              "added": 0,
+                              "deleted": 4,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "path": 1,
+                                                "repo_owner": 1,
+                                                "repo_name": 2,
+                                                "repo_info": 1
+                                          },
+                                          "functions": {
+                                                "get_repo": 1
+                                          },
+                                          "imports": {
+                                                "fire": 1,
+                                                "helpers": 1,
+                                                "get_repository_info": 1,
+                                                "save_data": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "14d5898efdcc512e1f8f12352996ed0fc9a465b6": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "41f5ca271ef9bff9557705d5b4c101cad96c938d",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 0,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "d11328cd9f568b423dc173b86353f4a6fd2c64a8": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/docker/Dockerfile",
+                              "blob_id": "9761d19adfd87beff63856e6e8ea2add70f2fa26",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/docker/Dockerfile",
+                              "added": 8,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": ".github/docker/action.yml",
+                              "blob_id": "0011139e4a702a4d9a0f35f0d0bd824d0c5a405d",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/docker/action.yml",
+                              "added": 16,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": ".github/docker/entrypoint.sh",
+                              "blob_id": "e33ed461ecb9eb47c0f32bcb1a76160ff5e48339",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/docker/entrypoint.sh",
+                              "added": 5,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "ff0c3af77d59801cc2695a75a1aeb4e764d1f1d6",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 13,
+                              "deleted": 4,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": ".gitignore",
+                              "blob_id": "8c794c2484c69b8c76335ef0bfa25cae92a0b464",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.gitignore",
+                              "added": 2,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/helpers.py",
+                              "blob_id": "c7af85b1206d3b20abf3bbdfef277156d91d2674",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/helpers.py",
+                              "added": 4,
+                              "deleted": 3,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "url": 1,
+                                                "clone_path": 1,
+                                                "repo": 1,
+                                                "res": 4,
+                                                "commit": 1,
+                                                "commit_sha": 1,
+                                                "changes": 2,
+                                                "change_dict": 1,
+                                                "old_sha": 1,
+                                                "new_sha": 1,
+                                                "differences": 1
+                                          },
+                                          "functions": {
+                                                "get_repository_info": 1,
+                                                "get_changes": 1,
+                                                "get_change_info": 1,
+                                                "save_data": 1
+                                          },
+                                          "imports": {
+                                                "json": 1,
+                                                "difflib": 1,
+                                                "unified_diff": 1,
+                                                "typing": 1,
+                                                "Dict": 1,
+                                                "List": 1,
+                                                "dulwich.diff_tree": 1,
+                                                "TreeChange": 1,
+                                                "dulwich.porcelain": 1,
+                                                "clone": 1,
+                                                "dulwich.repo": 1,
+                                                "Repo": 1,
+                                                "dulwich.walk": 1,
+                                                "WalkEntry": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1,
+                                                "tqdm": 2
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "6915aa776f67004399616dea7ead9ca4e72a20f9": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "eae26e40f6a0cd12e9394fd1b1a3ca851825beba",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 1,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "ccaa2260bb4d7055a9b49a45afd7a4554c748f92": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "b0f083722ff9fb43139ee9a9e73fe6f89b990ac0",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 6,
+                              "deleted": 3,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/main.py",
+                              "blob_id": "55ecfd69a4732d333bcb3985ca9773281cf42f11",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/main.py",
+                              "added": 0,
+                              "deleted": 3,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "path": 1,
+                                                "repo_owner": 1,
+                                                "repo_name": 2,
+                                                "repo_info": 1
+                                          },
+                                          "functions": {
+                                                "get_repo": 1
+                                          },
+                                          "imports": {
+                                                "fire": 1,
+                                                "helpers": 1,
+                                                "get_repository_info": 1,
+                                                "save_data": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "d96270b6d63b73d41fcc70d7acfd8687c8254677": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "src/helpers.py",
+                              "blob_id": "a4845759da444ade51fb70eefe5b5bba8df5c5cd",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/helpers.py",
+                              "added": 2,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "url": 1,
+                                                "clone_path": 1,
+                                                "repo": 1,
+                                                "res": 4,
+                                                "commit": 1,
+                                                "commit_sha": 1,
+                                                "changes": 2,
+                                                "change_dict": 1,
+                                                "old_sha": 1,
+                                                "new_sha": 1,
+                                                "differences": 1
+                                          },
+                                          "functions": {
+                                                "get_repository_info": 1,
+                                                "get_changes": 1,
+                                                "get_change_info": 1,
+                                                "save_data": 1
+                                          },
+                                          "imports": {
+                                                "json": 1,
+                                                "difflib": 1,
+                                                "unified_diff": 1,
+                                                "typing": 1,
+                                                "Dict": 1,
+                                                "List": 1,
+                                                "dulwich.diff_tree": 1,
+                                                "TreeChange": 1,
+                                                "dulwich.porcelain": 1,
+                                                "clone": 1,
+                                                "dulwich.repo": 1,
+                                                "Repo": 1,
+                                                "dulwich.walk": 1,
+                                                "WalkEntry": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1,
+                                                "tqdm": 2
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/main.py",
+                              "blob_id": "112afd64bf26e6b167bb5187c69e67347fe4390b",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/main.py",
+                              "added": 1,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "path": 1,
+                                                "repo_owner": 1,
+                                                "repo_name": 2,
+                                                "repo_info": 1
+                                          },
+                                          "functions": {
+                                                "get_repo": 1
+                                          },
+                                          "imports": {
+                                                "fire": 1,
+                                                "helpers": 1,
+                                                "get_repository_info": 1,
+                                                "save_data": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "efcc2705636cb21e75adaddf41a443dcaa05ea08": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "src/github/git_processor.py",
+                              "blob_id": "4b6609f2d29f0945f43c88ae5e80d431290d681c",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/github/git_processor.py",
+                              "added": 1,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "logger": 1,
+                                                "github": 1,
+                                                "repository": 1,
+                                                "user_to_repo": 1,
+                                                "repositories": 2,
+                                                "search_rate_limit": 1,
+                                                "reset_timestamp": 1
+                                          },
+                                          "functions": {
+                                                "get_stargazers": 1,
+                                                "wait_for_request": 1
+                                          },
+                                          "imports": {
+                                                "calendar": 1,
+                                                "logging": 1,
+                                                "time": 1,
+                                                "github": 1,
+                                                "Github": 1,
+                                                "RateLimitExceededException": 1,
+                                                "github.NamedUser": 1,
+                                                "NamedUser": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/helpers.py",
+                              "blob_id": "9b1321821cdec342bbe4018cac13a074e6e3f599",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/helpers.py",
+                              "added": 1,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "url": 1,
+                                                "clone_path": 1,
+                                                "repo": 1,
+                                                "res": 4,
+                                                "commit": 1,
+                                                "commit_sha": 1,
+                                                "changes": 2,
+                                                "change_dict": 1,
+                                                "old_sha": 1,
+                                                "new_sha": 1,
+                                                "differences": 1
+                                          },
+                                          "functions": {
+                                                "get_repository_info": 1,
+                                                "get_changes": 1,
+                                                "get_change_info": 1,
+                                                "save_data": 1
+                                          },
+                                          "imports": {
+                                                "json": 1,
+                                                "difflib": 1,
+                                                "unified_diff": 1,
+                                                "typing": 1,
+                                                "Dict": 1,
+                                                "List": 1,
+                                                "dulwich.diff_tree": 1,
+                                                "TreeChange": 1,
+                                                "dulwich.porcelain": 1,
+                                                "clone": 1,
+                                                "dulwich.repo": 1,
+                                                "Repo": 1,
+                                                "dulwich.walk": 1,
+                                                "WalkEntry": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1,
+                                                "tqdm": 2
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/main.py",
+                              "blob_id": "4065b543ea9f3faf0e7caf50aec32a56034d62c7",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/main.py",
+                              "added": 2,
+                              "deleted": 3,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "path": 1,
+                                                "repo_owner": 1,
+                                                "repo_name": 2,
+                                                "repo_info": 1
+                                          },
+                                          "functions": {
+                                                "get_repo": 1
+                                          },
+                                          "imports": {
+                                                "fire": 1,
+                                                "helpers": 1,
+                                                "get_repository_info": 1,
+                                                "save_data": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "460f08e45466dad4168bd422a2e9608ee28eda28": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "75a6315d56c9834c0163446c2fdf1c629bf17eec",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 2,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/github/git_processor.py",
+                              "blob_id": "8e7c01aceca2110462aa9836f6be9df891cb9aa4",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/github/git_processor.py",
+                              "added": 11,
+                              "deleted": 2,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "logger": 1,
+                                                "github": 1,
+                                                "repository": 1,
+                                                "user_to_repo": 1,
+                                                "repositories": 2,
+                                                "search_rate_limit": 1,
+                                                "reset_timestamp": 1
+                                          },
+                                          "functions": {
+                                                "get_stargazers": 1,
+                                                "wait_for_request": 1
+                                          },
+                                          "imports": {
+                                                "calendar": 1,
+                                                "logging": 1,
+                                                "time": 1,
+                                                "github": 1,
+                                                "Github": 1,
+                                                "RateLimitExceededException": 1,
+                                                "github.NamedUser": 1,
+                                                "NamedUser": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/helpers.py",
+                              "blob_id": "b64e2efd7d01c97f6a67b704430a194193c6c793",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/helpers.py",
+                              "added": 9,
+                              "deleted": 8,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "url": 1,
+                                                "clone_path": 1,
+                                                "repo": 1,
+                                                "res": 4,
+                                                "commit": 1,
+                                                "commit_sha": 1,
+                                                "changes": 2,
+                                                "change_dict": 1,
+                                                "old_sha": 1,
+                                                "new_sha": 1,
+                                                "differences": 1
+                                          },
+                                          "functions": {
+                                                "get_repository_info": 1,
+                                                "get_changes": 1,
+                                                "get_change_info": 1,
+                                                "save_data": 1
+                                          },
+                                          "imports": {
+                                                "json": 1,
+                                                "difflib": 1,
+                                                "unified_diff": 1,
+                                                "typing": 1,
+                                                "Dict": 1,
+                                                "List": 1,
+                                                "dulwich.diff_tree": 1,
+                                                "TreeChange": 1,
+                                                "dulwich.porcelain": 1,
+                                                "clone": 1,
+                                                "dulwich.repo": 1,
+                                                "Repo": 1,
+                                                "dulwich.walk": 1,
+                                                "WalkEntry": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1,
+                                                "tqdm": 2
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/main.py",
+                              "blob_id": "d05d91952d83aedf08add50a8a5ca45b147710a0",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/main.py",
+                              "added": 9,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "path": 1,
+                                                "repo_owner": 1,
+                                                "repo_name": 2,
+                                                "repo_info": 1
+                                          },
+                                          "functions": {
+                                                "get_repo": 1
+                                          },
+                                          "imports": {
+                                                "fire": 1,
+                                                "helpers": 1,
+                                                "get_repository_info": 1,
+                                                "save_data": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "0896e6e502f2eea96271546e375057255ecabc8c": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "9719d5576d4fae2cc0bc8c6789f1660fb74b2139",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 1,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "37239f871f185fb18c756a7845c20af823662d40": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "0efb35ed318df3557b6c793632c74d929ca19eb2",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 4,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "931e490f8465c7780d0c572866877515dcbc5caf": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "f1117acfcc96879a001c117d05372dd8e77dd848",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 2,
+                              "deleted": 2,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "a88b8b256f581012b2ea1378bff44c794ff1756c": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "c92bc974561de88ab1c98ae45f8a0aaa45be60ec",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 1,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "08ded68b0257cb4ee6f76b03905b69791f79ad2d": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "1322d85196d904fddaf2f956ac7eb7082388dca8",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 1,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "f876d378e14a3c171d776a58f75ce77a85d6c110": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "99503462a4c55929caaffdb79c6af5e0a351eff5",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 1,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "98a684cde7aee87ceb0859e8c16a2e15185d4c9a": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "061b3602087c0b4885ae8dc15eab860c706f0c84",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 1,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "test/git_test.py",
+                              "blob_id": "d5af60aaf9b6a425c81a14a7777526afbd86d79c",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/test/git_test.py",
+                              "added": 1,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": null
+                              }
+                        }
+                  ]
+            },
+            "5bcbd96f337f7f7c170dbcbaeaca221dfd87ead5": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "helpers.py",
+                              "blob_id": "9b32ae19f631fab57056ba1d8e81fbd8ce9e4213",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/helpers.py",
+                              "added": 0,
+                              "deleted": 132,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": null
+                              }
+                        },
+                        {
+                              "file": "main.py",
+                              "blob_id": "9109c3ba7323e7c448476929860af53ef385dac4",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/main.py",
+                              "added": 0,
+                              "deleted": 20,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": null
+                              }
+                        },
+                        {
+                              "file": "requirements.txt",
+                              "blob_id": "7098ecadac3b3af275571ae3fbf99b6f32435993",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/requirements.txt",
+                              "added": 1,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "setup.py",
+                              "blob_id": "cfa527ee5da8f84e6ebe0e339099f6494925caa8",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/setup.py",
+                              "added": 2,
+                              "deleted": 2,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "install_reqs": 1
+                                          },
+                                          "functions": {},
+                                          "imports": {
+                                                "setuptools": 1,
+                                                "pip._internal.req": 1,
+                                                "parse_requirements": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/github/git_processor.py",
+                              "blob_id": "96f07ebaa53ac6e9ead133065b2f74657b884524",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/github/git_processor.py",
+                              "added": 24,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "logger": 1,
+                                                "github": 1,
+                                                "repository": 1,
+                                                "user_to_repo": 1,
+                                                "repositories": 2,
+                                                "search_rate_limit": 1,
+                                                "reset_timestamp": 1
+                                          },
+                                          "functions": {
+                                                "get_stargazers": 1,
+                                                "wait_for_request": 1
+                                          },
+                                          "imports": {
+                                                "calendar": 1,
+                                                "logging": 1,
+                                                "time": 1,
+                                                "github": 1,
+                                                "Github": 1,
+                                                "RateLimitExceededException": 1,
+                                                "github.NamedUser": 1,
+                                                "NamedUser": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/helpers.py",
+                              "blob_id": "9b32ae19f631fab57056ba1d8e81fbd8ce9e4213",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/helpers.py",
+                              "added": 132,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "url": 1,
+                                                "clone_path": 1,
+                                                "repo": 1,
+                                                "res": 4,
+                                                "commit": 1,
+                                                "commit_sha": 1,
+                                                "changes": 2,
+                                                "change_dict": 1,
+                                                "old_sha": 1,
+                                                "new_sha": 1,
+                                                "differences": 1
+                                          },
+                                          "functions": {
+                                                "get_repository_info": 1,
+                                                "get_changes": 1,
+                                                "get_change_info": 1,
+                                                "save_data": 1
+                                          },
+                                          "imports": {
+                                                "json": 1,
+                                                "difflib": 1,
+                                                "unified_diff": 1,
+                                                "typing": 1,
+                                                "Dict": 1,
+                                                "List": 1,
+                                                "dulwich.diff_tree": 1,
+                                                "TreeChange": 1,
+                                                "dulwich.porcelain": 1,
+                                                "clone": 1,
+                                                "dulwich.repo": 1,
+                                                "Repo": 1,
+                                                "dulwich.walk": 1,
+                                                "WalkEntry": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1,
+                                                "tqdm": 2
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "src/main.py",
+                              "blob_id": "9109c3ba7323e7c448476929860af53ef385dac4",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/src/main.py",
+                              "added": 20,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "path": 1,
+                                                "repo_owner": 1,
+                                                "repo_name": 2,
+                                                "repo_info": 1
+                                          },
+                                          "functions": {
+                                                "get_repo": 1
+                                          },
+                                          "imports": {
+                                                "fire": 1,
+                                                "helpers": 1,
+                                                "get_repository_info": 1,
+                                                "save_data": 1,
+                                                "pathlib2": 1,
+                                                "Path": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "14f799a242fe2d729805e3e76639ae3ace84b13e": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "setup.py",
+                              "blob_id": "394bc5f8273302488ecd053c9c7ff2de1ba45dd1",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/setup.py",
+                              "added": 2,
+                              "deleted": 2,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "install_reqs": 1
+                                          },
+                                          "functions": {},
+                                          "imports": {
+                                                "setuptools": 1,
+                                                "pip._internal.req": 1,
+                                                "parse_requirements": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "7e4c65acbb0de380c6f6c9e20b563012c290961b": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "setup.py",
+                              "blob_id": "77a72c75289b727bd84cac0ca77f4ac400354dd6",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/setup.py",
+                              "added": 2,
+                              "deleted": 2,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "install_reqs": 1
+                                          },
+                                          "functions": {},
+                                          "imports": {
+                                                "setuptools": 1,
+                                                "pip._internal.req": 1,
+                                                "parse_requirements": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "93b9087994a0ae49d71801b1bee475e6d39b290b": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "d07d0a2d2024a6bc5c4de3cafeeee6b4e77423af",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 1,
+                              "deleted": 1,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "90de418add1109cd29d7793f513dbb704c94a055": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "setup.py",
+                              "blob_id": "73f19a95c1dbadabe59ff9343a1ce31dcfb8f36d",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/setup.py",
+                              "added": 2,
+                              "deleted": 2,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "install_reqs": 1
+                                          },
+                                          "functions": {},
+                                          "imports": {
+                                                "setuptools": 1,
+                                                "pip._internal.req": 1,
+                                                "parse_requirements": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "c0411962e78d8ef6e84ac2a59663dc523a66a64a": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": ".github/workflows/ci.yml",
+                              "blob_id": "c16892e35976939717cd085a4407b0d69cae1ec6",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.github/workflows/ci.yml",
+                              "added": 70,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "setup.py",
+                              "blob_id": "394bc5f8273302488ecd053c9c7ff2de1ba45dd1",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/setup.py",
+                              "added": 10,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": {
+                                          "variables": {
+                                                "install_reqs": 1
+                                          },
+                                          "functions": {},
+                                          "imports": {
+                                                "setuptools": 1,
+                                                "pip._internal.req": 1,
+                                                "parse_requirements": 1
+                                          },
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "b0936681b9840668ba7b66632f96078942798c3b": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "helpers.py",
+                              "blob_id": "9b32ae19f631fab57056ba1d8e81fbd8ce9e4213",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/helpers.py",
+                              "added": 132,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": null
+                              }
+                        },
+                        {
+                              "file": "main.py",
+                              "blob_id": "9109c3ba7323e7c448476929860af53ef385dac4",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/main.py",
+                              "added": 20,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": null
+                              }
+                        },
+                        {
+                              "file": "requirements.txt",
+                              "blob_id": "8c6420e0e593440c0ea2642f706100317db5b9b1",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/requirements.txt",
+                              "added": 3,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        },
+                        {
+                              "file": "test/git_test.py",
+                              "blob_id": "493b0f124633cf166099acdf4b2c9b6adcee33a8",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/test/git_test.py",
+                              "added": 10,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "python",
+                                    "code_elements": null
+                              }
+                        }
+                  ]
+            },
+            "14e930bdbc4e2838d6b2a64642be058335ace2dd": {
+                  "author": "alf3ratz <49417479+alf3ratz@users.noreply.github.com>",
+                  "changes": [
+                        {
+                              "file": "README.md",
+                              "blob_id": "011cbf4158399f199094b9b19ce42537d77a79b5",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/README.md",
+                              "added": 33,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            },
+            "888133fff74161a2d602d7d4406ba3ce3011c276": {
+                  "author": "Egor <egorbu@gmail.com>",
+                  "changes": [
+                        {
+                              "file": ".gitignore",
+                              "blob_id": "d9005f2cc7fc4e65f14ed5518276007c08cf2fd0",
+                              "blob_path": "/mnt/c/Users/User1337/PycharmProjects/2022_similar_dev_search_petropavlovskiy2/repos/alf3ratz_2022_similar_dev_search_petropavlovskiy/.gitignore",
+                              "added": 152,
+                              "deleted": 0,
+                              "code_info": {
+                                    "language": "",
+                                    "code_elements": {
+                                          "variables": {},
+                                          "functions": {},
+                                          "imports": {},
+                                          "classes": {}
+                                    }
+                              }
+                        }
+                  ]
+            }
+      }
+}
