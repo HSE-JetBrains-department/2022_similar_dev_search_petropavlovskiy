@@ -1,7 +1,7 @@
 name: ci
 
 on:
-  on: [ push, pull_request, release ]
+  [ push, pull_request, release ]
 
 jobs:
   build:
