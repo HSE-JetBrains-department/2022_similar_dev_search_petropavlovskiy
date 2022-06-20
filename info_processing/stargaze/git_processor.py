@@ -1,6 +1,7 @@
 import calendar
 import logging
 import time
+from collections import defaultdict
 from typing import Dict, List
 
 from github import Github, RateLimitExceededException
@@ -18,7 +19,7 @@ def get_stargazers(repo_name: str, github_token: str, number_of_repo: int) -> Di
     """
     github = Github(github_token)
     repository = github.get_repo(repo_name)
-    user_to_repo = {}
+    user_to_repo = defaultdict()
     repositories = []
     count = 0
     for user in repository.get_stargazers():
