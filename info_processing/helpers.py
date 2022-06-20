@@ -7,6 +7,7 @@ from dulwich.diff_tree import TreeChange
 from dulwich.porcelain import clone
 from dulwich.repo import Repo
 from dulwich.walk import WalkEntry
+
 from pathlib2 import Path
 
 from tqdm import tqdm
