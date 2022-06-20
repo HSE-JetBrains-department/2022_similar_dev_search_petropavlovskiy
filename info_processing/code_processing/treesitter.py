@@ -5,10 +5,12 @@ from typing import Dict
 
 from dulwich.porcelain import clone
 from dulwich.repo import Repo
-from pathlib2 import Path
-from tree_sitter import Parser, Language
 
-PARSER = Parser()
+from pathlib2 import Path
+
+from tree_sitter import Language, Parser
+
+parser = Parser()
 logger = logging.getLogger(__name__)
 
 
@@ -44,12 +46,12 @@ def process_identifiers(blob_path: str, language: str) -> Dict:
     if language == "":
         return ident_vector
     file_lang = Language(f"{Path().cwd().parent}/build/my-languages.so", language)
-    PARSER.set_language(file_lang)
+    parser.set_language(file_lang)
     file_lang = get_query(file_lang, language)
     try:
         with open(blob_path, "r") as file:
             code = bytes(file.read(), "utf8")
-        for index, identifier in enumerate(file_lang.captures(PARSER.parse(code).root_node)):
+        for index, identifier in enumerate(file_lang.captures(parser.parse(code).root_node)):
             node = identifier[0]
             capture_type = identifier[1]
             ident = code[node.start_byte: node.end_byte].decode()
@@ -57,8 +59,8 @@ def process_identifiers(blob_path: str, language: str) -> Dict:
                 "classes" if capture_type == "class_name" else (
                     "imports" if capture_type == "dotted_name" else "functions"))][ident] += 1
         return ident_vector
-    except:
-        pass
+    except Exception as e:
+        print(e)
 
 
 def clone_repo(path: str) -> Repo:

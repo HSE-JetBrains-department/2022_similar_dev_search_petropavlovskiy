@@ -1,0 +1,5 @@
+[
+      "https://github.com/navgurukul/newton/",
+      "https://github.com/MicrosoftDocs/pipelines-python-django/",
+      "https://github.com/OmdenaAI/Arabic-Chapter/"
+]
