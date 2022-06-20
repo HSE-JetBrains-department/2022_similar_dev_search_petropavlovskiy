@@ -43,9 +43,6 @@ def get_repository_info(url: str, repo_name: str) -> Dict:
     :param url: repository url
     :return: dict with repository description
     """
-    if not url.endswith(".git"):
-        url = url + ".git"
-
     clone_path = Path(f"{Path().cwd().parent}/repos/{repo_name}")
     if os.path.exists(clone_path):
         repo = Repo(clone_path.resolve())

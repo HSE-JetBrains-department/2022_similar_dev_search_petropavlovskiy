@@ -1,0 +1,79 @@
+{
+  "Stéphane Busso": [
+    "ethereum/execution-apis",
+    "Earnifi/essential-eth",
+    "HydroProtocol/hydro-scaffold-dex",
+    "chainflag/eth-faucet",
+    "miguelmota/go-ethereum-hdwallet"
+  ],
+  "None": [
+    "exelban/stats",
+    "claranet/ansible-role-log4shell",
+    "claranet/terraform-signalfx-detectors",
+    "claranet/ansible-role-users",
+    "errbit/errbit"
+  ],
+  "Shaun Walbridge": [
+    "sublimehq/anim_encoder",
+    "conda/conda-pack",
+    "ISRICWorldSoil/SoilGrids250m",
+    "setsmdeveloper/SETSM",
+    "giswqs/whitebox-python"
+  ],
+  "Manuel Martín": [
+    "aqeelanwar/MaskTheFace",
+    "mlflow/mlflow",
+    "astanin/python-tabulate",
+    "pycaret/pycaret",
+    "kkroening/ffmpeg-python"
+  ],
+  "Michael Kovacs": [
+    "sdiehl/awesome-crypto-critique",
+    "ckz8780/market-toolkit",
+    "alvaromontoro/almond.css",
+    "automerge/automerge",
+    "veeral-patel/how-to-secure-anything"
+  ],
+  "Chiyuan Zhang": [
+    "helix-editor/helix",
+    "neovide/neovide",
+    "google/bi-tempered-loss",
+    "apache/incubator-mxnet",
+    "mrtzh/Tex2Slide"
+  ],
+  "Bruno Melo": [
+    "django-crispy-forms/crispy-bootstrap5",
+    "akx/django-managerie",
+    "wailsapp/wails",
+    "c6p/logseq-hypothesis",
+    "tjunxiang92/Android-Vulnerabilities"
+  ],
+  "Régis Gaidot": [
+    "GoHypernet/hypernet-protocol",
+    "earthly/earthly",
+    "carloscuesta/gitmoji-cli",
+    "vcr/vcr",
+    "HashLips/generative-art-opensource"
+  ],
+  "Fernando Meyer": [
+    "borisdayma/dalle-mini",
+    "kyleconroy/sqlc",
+    "BishopFox/sliver",
+    "joshreve/dactyl-keyboard",
+    "planetmath/54_General_topology"
+  ],
+  "Jeff Pollard": [
+    "apache/kafka",
+    "pirate/mesh-networking",
+    "pinterest/secor",
+    "freedomofpress/securedrop",
+    "theonion/fartscroll.js"
+  ],
+  "Dan O'Huiginn": [
+    "reymond-group/underdarkgo",
+    "mwouts/jupytext",
+    "hasura/awesome-live-reloading",
+    "obsidianmd/obsidian-api",
+    "dair-ai/nlp_paper_summaries"
+  ]
+}
