@@ -1,15 +1,7 @@
 name: ci
 
 on:
-  push:
-    branches:
-      - main
-      - 'cad**'
-  pull_request:
-    types: [ opened, reopened ]
-  release:
-    types: [ published ]
-
+  [ push, pull_request, release ]
 jobs:
   build:
     runs-on: ubuntu-latest

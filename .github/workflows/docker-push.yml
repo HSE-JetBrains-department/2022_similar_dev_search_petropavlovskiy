@@ -1,11 +1,7 @@
 name: docker-push
 
 on:
-  push:
-    branches:
-      - main
-  release:
-    types: [ published ]
+  [ push, pull_request, release ]
 
 env:
   REGISTRY: ghcr.io
