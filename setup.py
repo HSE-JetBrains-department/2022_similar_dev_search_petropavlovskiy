@@ -1,14 +1,8 @@
+from pip._internal.req import parse_requirements
+
 import setuptools
 
-install_reqs = ["fire",
-                "dulwich",
-                "tqdm",
-                "PyGithub",
-                "pathlib2",
-                "setuptools",
-                "pip",
-                "tree-sitter",
-                "enry"]
+install_reqs = parse_requirements('requirements.txt', session='hack')
 
 setuptools.setup(
     name="similar_dev_search_petropavlovskiy",
