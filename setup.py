@@ -1,3 +1,4 @@
+from pip._internal.req import parse_requirements
 
 import setuptools
 
