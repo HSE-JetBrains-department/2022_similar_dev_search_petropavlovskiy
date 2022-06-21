@@ -1,3 +1,5 @@
+from pip._internal.req import parse_requirements
+
 import setuptools
 
 install_reqs = parse_requirements('requirements.txt', session='hack')
