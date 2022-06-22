@@ -1,7 +1,9 @@
-fire~=0.4.0
+fire
 dulwich~=0.20.32
 tqdm~=4.64.0
 PyGithub~=1.55
 pathlib2~=2.3.7.post1
 setuptools~=60.2.0
 pip~=21.3.1
+tree-sitter
+enry

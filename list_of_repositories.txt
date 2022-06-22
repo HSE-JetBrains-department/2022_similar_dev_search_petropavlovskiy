@@ -1,0 +1,5 @@
+[
+      "https://github.com/OmdenaAI/Arabic-Chapter/",
+      "https://github.com/Azure-Samples/resource-manager-python-template-deployment/",
+      "https://github.com/MicrosoftDocs/pipelines-python-django/"
+]
