@@ -1,8 +1,7 @@
 import json
+import logging
 import os.path
-
 from difflib import unified_diff
-
 from typing import Dict, List
 
 from dulwich.diff_tree import TreeChange
@@ -12,15 +11,16 @@ from dulwich.walk import WalkEntry
 
 from info_processing.code_processing.enry_processor import get_language
 from info_processing.code_processing.treesitter import process_identifiers
-
 from info_processing.code_processing.treesitter import setup_tree_sitter_parser
 
 from pathlib2 import Path
 
 from tqdm import tqdm
 
+logger = logging.getLogger(__name__)
 
-def get_repository_info(url: str, repo_name: str) -> Dict:
+
+def get_repository_info(url: str, repo_name: str, clone_dir_path: str) -> Dict:
     """
     Returns repository description.
     Result structure: {
@@ -41,9 +41,15 @@ def get_repository_info(url: str, repo_name: str) -> Dict:
         }
     }
     :param url: repository url
+    :clone_dir_path: path to directory with cloned repositories
+    :repo_name: name of a cloning repository
     :return: dict with repository description
     """
-    clone_path = Path(f"{Path().cwd().parent}/repos/{repo_name}")
+    if not os.path.exists(clone_dir_path):
+        logger.warning("Directory for cloning repositories does not exist\nCreating directory ...")
+        os.mkdir(clone_dir_path)
+
+    clone_path = Path(f"{clone_dir_path}/{repo_name}")
     if os.path.exists(clone_path):
         repo = Repo(clone_path.resolve())
     else:
@@ -138,7 +144,7 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
                     res["added"] += 1
                 if diff.startswith("-") and not diff.startswith("--"):
                     res["deleted"] += 1
-    except UnicodeDecodeError as e:
+    except UnicodeDecodeError:
         res = None
 
     return res

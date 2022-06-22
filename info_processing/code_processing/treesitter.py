@@ -1,10 +1,8 @@
 import logging
-import os
 from collections import Counter
 from typing import Dict
 
-from dulwich.porcelain import clone
-from dulwich.repo import Repo
+from info_processing.git.treesitter_cloner import clone_treesitter_helpers
 
 from pathlib2 import Path
 
@@ -12,6 +10,9 @@ from tree_sitter import Language, Parser
 
 parser = Parser()
 logger = logging.getLogger(__name__)
+TREE_SITTER_PYTHON = clone_treesitter_helpers("https://github.com/tree-sitter/tree-sitter-python")
+TREE_SITTER_JAVASCRIPT = clone_treesitter_helpers("https://github.com/tree-sitter/tree-sitter-javascript")
+TREE_SITTER_JAVA = clone_treesitter_helpers("https://github.com/tree-sitter/tree-sitter-java")
 
 
 def setup_tree_sitter_parser() -> None:
@@ -20,16 +21,13 @@ def setup_tree_sitter_parser() -> None:
     grammars.
     :return: Returns parser.
     """
-    tree_sitter_python = clone_repo("https://github.com/tree-sitter/tree-sitter-python")
-    tree_sitter_javascript = clone_repo("https://github.com/tree-sitter/tree-sitter-javascript")
-    tree_sitter_java = clone_repo("https://github.com/tree-sitter/tree-sitter-java")
     path_to_build = str(Path(f"{Path.cwd().parent}/build/my-languages.so"))
     Language.build_library(
         path_to_build,
         [
-            str(Path(tree_sitter_python.path)),
-            str(Path(tree_sitter_javascript.path)),
-            str(Path(tree_sitter_java.path))
+            str(Path(TREE_SITTER_PYTHON.path)),
+            str(Path(TREE_SITTER_JAVASCRIPT.path)),
+            str(Path(TREE_SITTER_JAVA.path))
         ]
     )
 
@@ -59,22 +57,8 @@ def process_identifiers(blob_path: str, language: str) -> Dict:
                 "classes" if capture_type == "class_name" else (
                     "imports" if capture_type == "dotted_name" else "functions"))][ident] += 1
         return ident_vector
-    except Exception as e:
-        print(e)
-
-
-def clone_repo(path: str) -> Repo:
-    """
-    Function cloned repo, if it is not existed, otherwise instantiate the existing one.
-    :param: The path in local directory or url to GitHub repository.
-    :return: Repository instance.
-    """
-    repo_name = path[path.rfind('/') + 1:]
-    path_to_repo = str(Path(f"{Path().cwd().parent}/treesitter/{repo_name}"))
-    parent_path = str(Path(path_to_repo).parent)
-    if not os.path.exists(parent_path):
-        os.makedirs(parent_path)
-    return Repo(path_to_repo) if os.path.exists(path_to_repo) else clone(path, path_to_repo)
+    except Exception:
+        pass
 
 
 def get_query(file_lang: Language, language: str) -> Language:

@@ -2,7 +2,7 @@ from typing import Dict
 
 from enry import get_language_by_extension
 
-using_languages = ['python', 'java', 'javascript']
+ALLOWED_LANGS = ['python', 'java', 'javascript']
 
 
 def process_languages(repo_info: Dict) -> dict:
@@ -29,4 +29,4 @@ def get_language(blob_path: str) -> str:
     :return: programming language
     """
     language = get_language_by_extension(blob_path).language.lower()
-    return language if using_languages.__contains__(language) else ""
+    return language if language in ALLOWED_LANGS else ""
