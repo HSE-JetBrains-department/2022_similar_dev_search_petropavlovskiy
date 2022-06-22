@@ -33,4 +33,4 @@
 - Покрытие его тестами, создание автоматизации и тд.
 
 # How application works
-[![Watch the video](https://office-guru.ru/wp-content/uploads/2021/08/original-1e3a9b0322e85ba64376e6de6a9a0065.jpg)](https://disk.yandex.ru/i/5iav7zEzyZxA_Q)
+[![Watch the video]([https://office-guru.ru/wp-content/uploads/2021/08/original-1e3a9b0322e85ba64376e6de6a9a0065.jpg](https://disk.yandex.ru/i/GoNYPrkyIahCSQ))](https://disk.yandex.ru/i/5iav7zEzyZxA_Q)
