@@ -1,4 +1,5 @@
 import json
+import logging
 import os.path
 
 from difflib import unified_diff
@@ -19,8 +20,10 @@ from pathlib2 import Path
 
 from tqdm import tqdm
 
+logger = logging.getLogger(__name__)
 
-def get_repository_info(url: str, repo_name: str) -> Dict:
+
+def get_repository_info(url: str, repo_name: str, clone_dir_path: str) -> Dict:
     """
     Returns repository description.
     Result structure: {
@@ -41,9 +44,14 @@ def get_repository_info(url: str, repo_name: str) -> Dict:
         }
     }
     :param url: repository url
+    :clone_dir_path: path to directory with cloned repositories
+    :repo_name: name of a cloning repository
     :return: dict with repository description
     """
-    clone_path = Path(f"{Path().cwd().parent}/repos/{repo_name}")
+    if not os.path.exists(clone_dir_path):
+        logger.warning("Directory for cloning repositories does not exist\nCreating directory ...")
+        os.mkdir(clone_dir_path)
+    clone_path = Path(f"{clone_dir_path}/{repo_name}")
     if os.path.exists(clone_path):
         repo = Repo(clone_path.resolve())
     else:
@@ -155,7 +163,7 @@ def save_data(data: Dict, path: Path):
         f.write(json.dumps(data, indent=6, ensure_ascii=False))
 
 
-def clone_repo(path: str) -> Repo:
+def clone_treesitter_helpers(path: str) -> Repo:
     """
     Function cloned repo, if it is not existed, otherwise instantiate the existing one.
     :param: The path in local directory or url to GitHub repository.

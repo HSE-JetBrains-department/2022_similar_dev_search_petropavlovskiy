@@ -3,16 +3,17 @@ from collections import defaultdict
 
 import fire
 
-from helpers import get_repository_info, save_data
+from git.helpers import get_repository_info, save_data
 
 from pathlib2 import Path
 
 
-def get_repo(path_to_repos: str, path_to_output: str):
+def get_repo(path_to_repos: str, clone_dir_path: str, path_to_output: str):
     """
     Save data about repositories to json file.
 
     :param path_to_output: path to JSON
+    :clone_dir_path: path to directory with cloned repositories
     :param path_to_repos: path to file with urls to repositories
     """
     path = Path(path_to_repos)
@@ -25,7 +26,7 @@ def get_repo(path_to_repos: str, path_to_output: str):
         repo_owner = repo_url.split("/")[3]
         repo_name = repo_url.split("/")[4]
         repo_name = f"{repo_owner}_{repo_name}"
-        repo_info = get_repository_info(repo_url, repo_name)
+        repo_info = get_repository_info(repo_url, repo_name, clone_dir_path)
         all_repos_info[repo_name] = repo_info
 
     save_data(all_repos_info, path_to_output)

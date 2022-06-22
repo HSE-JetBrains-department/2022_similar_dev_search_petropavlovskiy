@@ -2,7 +2,7 @@ import logging
 from collections import Counter
 from typing import Dict
 
-from info_processing.git.helpers import clone_repo
+from info_processing.git.helpers import clone_treesitter_helpers
 
 from pathlib2 import Path
 
@@ -10,9 +10,9 @@ from tree_sitter import Language, Parser
 
 parser = Parser()
 logger = logging.getLogger(__name__)
-TREE_SITTER_PYTHON = clone_repo("https://github.com/tree-sitter/tree-sitter-python")
-TREE_SITTER_JAVASCRIPT = clone_repo("https://github.com/tree-sitter/tree-sitter-javascript")
-TREE_SITTER_JAVA = clone_repo("https://github.com/tree-sitter/tree-sitter-java")
+TREE_SITTER_PYTHON = clone_treesitter_helpers("https://github.com/tree-sitter/tree-sitter-python")
+TREE_SITTER_JAVASCRIPT = clone_treesitter_helpers("https://github.com/tree-sitter/tree-sitter-javascript")
+TREE_SITTER_JAVA = clone_treesitter_helpers("https://github.com/tree-sitter/tree-sitter-java")
 
 
 def setup_tree_sitter_parser() -> None:
