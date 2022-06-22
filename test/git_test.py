@@ -15,7 +15,7 @@ class GitTest(unittest.TestCase):
         repo_name = "test_repo"
         repo_info = get_repository_info(test_repo_url, repo_name)
         print(repo_info)
-        self.assertTrue(repo_info["commits"]["7267bb437c1a1a66ab36b9dc31ed5aee9f84a278"] != None)
+        self.assertTrue(repo_info["commits"]["7267bb437c1a1a66ab36b9dc31ed5aee9f84a278"] is not None)
         delete_cloned_repo(repo_name)
 
 
