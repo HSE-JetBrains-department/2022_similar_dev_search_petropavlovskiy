@@ -57,7 +57,7 @@ def process_identifiers(blob_path: str, language: str) -> Dict:
                 "classes" if capture_type == "class_name" else (
                     "imports" if capture_type == "dotted_name" else "functions"))][ident] += 1
         return ident_vector
-    except Exception as e:
+    except Exception:
         pass
 
 

@@ -1,9 +1,7 @@
 import json
 import logging
 import os.path
-
 from difflib import unified_diff
-
 from typing import Dict, List
 
 from dulwich.diff_tree import TreeChange
@@ -13,7 +11,6 @@ from dulwich.walk import WalkEntry
 
 from info_processing.code_processing.enry_processor import get_language
 from info_processing.code_processing.treesitter import process_identifiers
-
 from info_processing.code_processing.treesitter import setup_tree_sitter_parser
 
 from pathlib2 import Path
@@ -147,7 +144,7 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
                     res["added"] += 1
                 if diff.startswith("-") and not diff.startswith("--"):
                     res["deleted"] += 1
-    except UnicodeDecodeError as e:
+    except UnicodeDecodeError:
         res = None
 
     return res
@@ -162,4 +159,3 @@ def save_data(data: Dict, path: Path):
     """
     with open(path.resolve(), "w") as f:
         f.write(json.dumps(data, indent=6, ensure_ascii=False))
-
