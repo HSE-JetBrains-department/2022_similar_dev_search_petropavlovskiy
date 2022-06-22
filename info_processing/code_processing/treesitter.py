@@ -2,7 +2,7 @@ import logging
 from collections import Counter
 from typing import Dict
 
-from info_processing.git.helpers import clone_treesitter_helpers
+from info_processing.git.treesitter_cloner import clone_treesitter_helpers
 
 from pathlib2 import Path
 

@@ -51,6 +51,7 @@ def get_repository_info(url: str, repo_name: str, clone_dir_path: str) -> Dict:
     if not os.path.exists(clone_dir_path):
         logger.warning("Directory for cloning repositories does not exist\nCreating directory ...")
         os.mkdir(clone_dir_path)
+
     clone_path = Path(f"{clone_dir_path}/{repo_name}")
     if os.path.exists(clone_path):
         repo = Repo(clone_path.resolve())
@@ -162,16 +163,3 @@ def save_data(data: Dict, path: Path):
     with open(path.resolve(), "w") as f:
         f.write(json.dumps(data, indent=6, ensure_ascii=False))
 
-
-def clone_treesitter_helpers(path: str) -> Repo:
-    """
-    Function cloned repo, if it is not existed, otherwise instantiate the existing one.
-    :param: The path in local directory or url to GitHub repository.
-    :return: Repository instance.
-    """
-    repo_name = path[path.rfind('/') + 1:]
-    path_to_repo = str(Path(f"{Path().cwd().parent}/treesitter/{repo_name}"))
-    parent_path = str(Path(path_to_repo).parent)
-    if not os.path.exists(parent_path):
-        os.makedirs(parent_path)
-    return Repo(path_to_repo) if os.path.exists(path_to_repo) else clone(path, path_to_repo)
