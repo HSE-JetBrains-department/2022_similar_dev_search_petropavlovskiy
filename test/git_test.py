@@ -1,5 +1,5 @@
 import logging
-import os
+import shutil
 import unittest
 
 from info_processing.git.helpers import get_repository_info
@@ -14,11 +14,10 @@ class GitTest(unittest.TestCase):
         cwd = Path.cwd()
         if cwd.name != "test":
             cwd = str(Path(f"{cwd}/test"))
-        path_to_file = str(Path(f"{cwd}/test_files/repository_url.txt"))
+        repo_url = "https://github.com/MicrosoftDocs/pipelines-python-django/"
         repo_name = "test_repo"
         dir_to_clone = str(Path(f"{Path().cwd().parent}/repos"))
-        repo_info = get_repository_info(path_to_file, repo_name, dir_to_clone)
-        print(repo_info)
+        repo_info = get_repository_info(repo_url, repo_name, dir_to_clone)
         self.assertTrue(repo_info["commits"]["7267bb437c1a1a66ab36b9dc31ed5aee9f84a278"] is not None)
         delete_cloned_repo(repo_name)
 
@@ -30,7 +29,7 @@ if __name__ == '__main__':
 def delete_cloned_repo(repo_name: str):
     try:
         repo_path = str(Path(f"{Path().cwd().parent}/repos/{repo_name}"))
-        os.rmdir(repo_path)
+        shutil.rmtree(repo_path)
     except Exception:
-        logger.info("Can't delete cloned test repository")
+        logger.warning("Can't delete cloned test repository")
         pass
