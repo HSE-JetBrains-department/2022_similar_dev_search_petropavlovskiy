@@ -33,4 +33,4 @@
 - Покрытие его тестами, создание автоматизации и тд.
 
 # How application works
-[![Watch the video](https://disk.yandex.ru/i/GoNYPrkyIahCSQ)](https://disk.yandex.ru/i/5iav7zEzyZxA_Q)
+[![Watch the video](./result/preview.png)](https://disk.yandex.ru/i/5iav7zEzyZxA_Q)
