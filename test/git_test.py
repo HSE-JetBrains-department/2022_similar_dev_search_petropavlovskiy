@@ -27,5 +27,6 @@ def delete_cloned_repo(repo_name: str):
     try:
         repo_path = str(Path(f"{Path().cwd().parent}/repos/{repo_name}"))
         os.rmdir(repo_path)
-    except:
+    except Exception:
         logger.info("Can't delete cloned test repository")
+        pass
