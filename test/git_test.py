@@ -2,9 +2,9 @@ import logging
 import shutil
 import unittest
 
-from info_processing.git.helpers import get_repository_info
-
 from pathlib2 import Path
+
+from info_processing.git.helpers import get_repository_info
 
 logger = logging.getLogger(__name__)
 
