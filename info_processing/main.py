@@ -11,7 +11,6 @@ from pathlib2 import Path
 def get_repo(path_to_repos: str, clone_dir_path: str, path_to_output: str):
     """
     Save data about repositories to json file.
-
     :param path_to_output: path to JSON
     :clone_dir_path: path to directory with cloned repositories
     :param path_to_repos: path to file with urls to repositories
